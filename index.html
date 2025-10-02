@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri Saya</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .biodata-container {
+            background-color: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 750px;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Desain Latar Belakang */
+        .biodata-container::before, .biodata-container::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .biodata-container::before {
+            width: 150px;
+            height: 150px;
+            top: -75px;
+            right: -75px;
+        }
+        .biodata-container::after {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+        }
+
+        /* Header dan Foto Profil */
+        .header {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #e0e0e0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            transition: transform 0.4s ease;
+        }
+        .profile-picture:hover {
+            transform: scale(1.08) rotate(5deg);
+        }
+
+        /* Tulisan Bergerak */
+        .marquee-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 25px 0;
+        }
+        marquee {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #34495e;
+            padding: 10px 0;
+            border-top: 2px dashed #bdc3c7;
+            border-bottom: 2px dashed #bdc3c7;
+        }
+
+        /* Bagian Informasi */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .info-item {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid;
+        }
+        .info-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .info-item h3 {
+            margin: 0 0 5px;
+            font-size: 1.1em;
+            color: #333;
+            font-weight: 600;
+        }
+        .info-item p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+        }
+        .info-item i {
+            font-size: 1.8em;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        /* Variasi Warna */
+        .item-nama { border-left-color: #e74c3c; color: #e74c3c; }
+        .item-ttl { border-left-color: #f39c12; color: #f39c12; }
+        .item-alamat { border-left-color: #3498db; color: #3498db; }
+        .item-sekolah { border-left-color: #2ecc71; color: #2ecc71; }
+        .item-kelas { border-left-color: #9b59b6; color: #9b59b6; }
+        .item-cita { border-left-color: #1abc9c; color: #1abc9c; }
+
+        .info-item.item-nama i { color: #e74c3c; }
+        .info-item.item-ttl i { color: #f39c12; }
+        .info-item.item-alamat i { color: #3498db; }
+        .info-item.item-sekolah i { color: #2ecc71; }
+        .info-item.item-kelas i { color: #9b59b6; }
+        .info-item.item-cita i { color: #1abc9c; }
+
+        /* Font dari Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="biodata-container">
+
+    <div class="header">
+        <h1>Biodata Diri Siswa</h1>
+        <p>Halo! Ini adalah informasi tentang saya</p>
+        <img src="https://via.placeholder.com/180/e74c3c/ffffff?text=FOTO" alt="Foto Profil" class="profile-picture">
+    </div>
+
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            Selamat datang! Ini biodata saya. Senang berkenalan dengan Anda semua!
+        </marquee>
+    </div>
+<br>
+<div>
+
+  <!-- Link yang membuka tab baru -->
+  <p><a href="https://www.youtube.com" target="_blank">Buka YouTube di Tab Baru</a></p>
+  </div>
+    <div class="info-grid">
+        <div class="info-item item-nama">
+            <i class="fas fa-user-circle"></i>
+            <div>
+                <h3>Nama Lengkap</h3>
+                <p>Hudan amartaqwa</p>
+            </div>
+        </div>
+
+        <div class="info-item item-ttl">
+            <i class="fas fa-birthday-cake"></i>
+            <div>
+                <h3>Tempat, Tanggal Lahir</h3>
+                <p>pekanbaru, 08 juli 2008</p>
+            </div>
+        </div>
+
+        <div class="info-item item-alamat">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+                <h3>Alamat</h3>
+                <p>Jalan Pahlawan No. 45, pekanbaru</p>
+            </div>
+        </div>
+
+        <div class="info-item item-sekolah">
+            <i class="fas fa-school"></i>
+            <div>
+                <h3>Asal Sekolah</h3>
+                <p>SMA Negeri 14 pekanbaru</p>
+            </div>
+        </div>
+
+        <div class="info-item item-kelas">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <div>
+                <h3>Kelas</h3>
+                <p>XI 6</p>
+            </div>
+        </div>
+
+        <div class="info-item item-cita">
+            <i class="fas fa-rocket"></i>
+            <div>
+                <h3>Cita-cita</h3>
+                <p>menjadi orang kaya</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
